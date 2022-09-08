@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6DC5845428C9005D007680E4 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC5845328C9005D007680E4 /* main.swift */; };
+		6DC5845D28C905D9007680E4 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC5845C28C905D9007680E4 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +24,7 @@
 
 /* Begin PBXFileReference section */
 		6DC5845028C9005D007680E4 /* ya-test-summer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "ya-test-summer"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6DC5845328C9005D007680E4 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		6DC5845C28C905D9007680E4 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +57,7 @@
 		6DC5845228C9005D007680E4 /* ya-test-summer */ = {
 			isa = PBXGroup;
 			children = (
-				6DC5845328C9005D007680E4 /* main.swift */,
+				6DC5845C28C905D9007680E4 /* main.swift */,
 			);
 			path = "ya-test-summer";
 			sourceTree = "<group>";
@@ -94,6 +94,7 @@
 				TargetAttributes = {
 					6DC5844F28C9005D007680E4 = {
 						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1340;
 					};
 				};
 			};
@@ -120,7 +121,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DC5845428C9005D007680E4 /* main.swift in Sources */,
+				6DC5845D28C905D9007680E4 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,10 +244,17 @@
 		6DC5845828C9005D007680E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 65DRR277K2;
 				ENABLE_HARDENED_RUNTIME = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -254,9 +262,15 @@
 		6DC5845928C9005D007680E4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 65DRR277K2;
 				ENABLE_HARDENED_RUNTIME = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
